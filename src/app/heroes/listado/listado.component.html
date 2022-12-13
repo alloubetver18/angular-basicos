@@ -1,0 +1,25 @@
+<p>Listado de Héroes</p>
+<!-- Directiva *ngFor -->
+<!-- IMPORTANTE -->
+<!-- La directiva ngForm nos permite declarar un bucle dentro de nuestro HTML utilizando elementos de nuestro TS para recorrerlo. -->
+
+<div *ngIf="heroeBorrado.length!=0; else noBorrado">
+    <h3>Héroe borrado: <small>{{heroeBorrado}}</small></h3>
+</div>
+<!-- Referencia numeral en el lado del Template -->
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+
+<button (click)="borrarHeroe();">
+    Borrar
+</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{ i+1 }} {{heroe}}
+    </li>
+</ul>
+
