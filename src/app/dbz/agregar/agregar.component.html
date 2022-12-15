@@ -1,0 +1,26 @@
+<h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+        <hr>
+        <!-- ngSubmit: Sustituye la ejecución de la función submit en un botón (que pòr defecto sería refrescar la pantalla) por otra función definida por nosotros -->
+        <form (ngSubmit)="agregar()">
+            <!-- Para que el valor de la caja de texto quede enlazado con el valor de la propiedad de un objeto de una clase en TS, usaremos la propiedad en HTML [value] 
+            Para asignar una función a un evento sobre un elemento de HTML, podemos hacerlo de la siguiente forma: (tipodeEvento)="funcion(parámetros)"
+            Pero también podemos hacerlo de la siguiente forma: con ngModel.
+            ngModel nos permite adentrarnos ligeramente en el concepto de 2WDB, es decir, 2 Way Data Binding, ya que nos permite obtener información desde nuestro archivo TS hacia la vista HTML, y al mismo tiempo nos permite enviar información desde nuestra vista HTML hasta nuestro archivo TS-->
+            <input 
+                type="text" 
+                name="nombre" id="" 
+                placeholder="Nombre"
+                [(ngModel)]="nuevo.nombre"
+            />
+                <!-- [value]="nuevo.nombre" 
+                (input)="cambiarNombre( $event )" -->
+            <input 
+                type="number" 
+                name="poder" id="" 
+                placeholder="Poder" 
+                [(ngModel)]="nuevo.poder"
+            />
+            <button type="submit">
+                Agregar
+            </button>    
+        </form>

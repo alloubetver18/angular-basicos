@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ContadorModule } from './contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
 /* import { ContadorComponent } from './contador/contador/contador.component'; */
 /* Tarea:
 Crear un nuevo módulo llamado ContadorModule
@@ -19,7 +20,8 @@ import { HeroesModule } from './heroes/heroes.module';
     BrowserModule,
     HeroesModule,
     //importar aquí.
-    ContadorModule
+    ContadorModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]

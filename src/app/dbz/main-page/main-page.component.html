@@ -1,0 +1,22 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+
+<div class="row">
+
+    <div class="col">
+        <!-- <app-personajes [personajes]="personajes">
+        </app-personajes> -->
+        <app-personajes></app-personajes>
+    </div>
+    <div class="col">
+        <!-- Por cada @Input utilizado, necesitaremos su correspondiente linea en la etiqueta de la vista HTML -->
+        <!-- Cuando utilizamos @Output, definimos un nuevo evento que será "escuchado" por los correspondientes elementos de HTML en los cuales esté declarado. Como parámetro, seleccionaremos un evento mediante el término $event, que en este caso será un objeto de tipo Personaje, que usaremos en el TS para añadir el nuevo personaje a la lista. -->
+        <!-- <app-agregar 
+            [nuevo]="nuevo"
+            (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"
+        ></app-agregar> -->
+        <app-agregar
+            [nuevo]="nuevo"></app-agregar>
+    </div>
+</div>
